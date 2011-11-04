@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+	<application>qwikinvoice</application>
+	<version>5</version>
+	
+	<!-- Configure java.util.logging -->
+	<system-properties>
+		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+		<!-- Disable cookies to avoid runtime permissions error -->
+    	<property name="com.google.gdata.DisableCookieHandler" value="true"/>
+    	<!-- The URL for GDocs -->
+    	<property name="com.studiodojo.gdata.url" value="https://docs.google.com/feeds/default/private/full" />
+	</system-properties>
+	
+	<static-files>
+		<include path="/resources/**.pdf" />
+	</static-files>
+	<sessions-enabled>true</sessions-enabled>
+	
+    
+</appengine-web-app>
